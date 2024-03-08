@@ -13,8 +13,8 @@
         
         input[type=submit] {
           width: 100%;
-          background-color: rgb(234, 241, 234);
-          color: white;
+          background-color: rgb(128, 67, 207);
+          color: rgb(10, 9, 12);
           padding: 14px 20px;
           margin: 8px 0;
           border: none;
@@ -38,16 +38,16 @@
 
 <form name="submit-to-google-sheet">
   <label for="name">Name:</label><br>
-  <input type="text" id="name" name="Name" placeholder="Enter Name"><br>
+  <input type="text" id="name" name="Name" required placeholder="Enter Name"><br>
   
   <label for="ename">Employee Name:</label><br>
-  <input type="text" id="ename" name="EmpName" placeholder="Enter Employee Name"><br>
+  <input type="text" id="ename" name="EmpName" required placeholder="Enter Employee Name"><br>
   
   <label for="Date">Date:</label>
-  <input type="date" id="date" name="Date"><br>
+  <input type="date" id="date" name="Date" required><br>
   
   <label>Mistake:</label><br>
-  <textarea name="Mistake" cols="50"></textarea>
+  <textarea name="Mistake" required cols="50"></textarea>
   
   <input type="submit" name="Submit"><br>
 
@@ -69,7 +69,7 @@
            {
             Success.innerHTML = "";
 
-           },5000)
+           },1000)
            form.reset();
         })
         .catch(error => console.error('Error!', error.message));
